@@ -1,0 +1,58 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1571041001196'); /* IE9 */
+  src: url('iconfont.eot?t=1571041001196#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALwAAsAAAAAB8QAAAKkAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqDUIMmATYCJAMICwYABCAFhG0HLhvKBhHVkz1kPw5jx3SyBA61KhmrOjg5EElGqv8cPE/r+D93ZhYPVrMa5O8Ko0P9O0INjkTe/Z+zbPIbFWGKcsgKbTG/wGl24E6re9NuAfDHvdO/AgpkPqCc5tj4qYujLtwa0N4YRVYgKYaZN4zdRHkQtyGAL4nkI43Nlzu4GMAiAWTZQhKAm9JhaooFF8Eu2WmQQ1i4ard6DMBB/n75Cq64oLA0oKx9dhtD7cdcmKY3eX/DFIE/ngXQ9oEG8gED0l1qa0WHsXw0vk7MkArrKhb4mOt9KG+1fzwQEBtQ6A9AvMg7Jz4WnGqhAsC0GrwC3OhVDP7RbrI/mL9WTkT6sunCnksi/vxM32PhLA9WxyOCTkaN+u29iNl0wTe4NM3afNnPTwgnqydAlkzXcTTEt5XNl3vib+ir31eqslbZ4yeMwJD4kMCCRj7qhG+v8uYfbP9XmHn++X9gSOAHrKiVdHfqmujrGkXqvZ9yHm0oYGPiZ5595BHUAuC9NVQsfuBnuH/Kue8FVf53/QwArx62feYe722gnQPc27QL/C5+yxrjCoFeGZtf6lBcue2FCvDFF/BAdoXyvq8jAmKL4Op8ERQOCaBxSUcNJR8s/CgEG5ca8CWPlv1+hLEGjRgfIJftAgjBXAdFIHdBE8wT1FDegUUk38EmWDT40ithJ/qRKUmm1kyBUIzhL2ZRU2tkFBUUXyl5lQEnhZz2JO6zIDqmnU3uqSYeY03/lbgiGjU3Fe6E+6gsG2y5ySkSMxVpR5aly55kRk0FChqYAqEYCX+RLGpqTZuLyr3+SsmrDLiG1GF/EvfZ8IiDid0C3cvqVqRreaT/SlxENKK5qZCdYKESxhqkLZ+WUyQmaY9IO8KS6um2MnN+RfV02wBQANTDAazWGM7KDAA=') format('woff2'),
+  url('iconfont.woff?t=1571041001196') format('woff'),
+  url('iconfont.ttf?t=1571041001196') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1571041001196#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-rili:before {
+  content: "\e72a";
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}

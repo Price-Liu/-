@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+  <image src="../../images/man_bg.jpg" style="position:absolute;width:100%;height:100%;z-index:0"></image>
+
+  <view style="position:relative; width:100%;height:100%">
+
+    <view class="row" style="justify-content:space-between;margin:20px 20px;">
+      <!-- 健康指数按钮 -->
+      <view style="width:100px;border-radius:40rpx;background:white;box-shadow:0 0 1px#888888;">
+        <view style="text-align:center;">
+          <text>健康指数</text>
+        </view>
+        <view style="text-align:center;">
+          {{score == '' ? '无': score}}
+        </view>
+      </view>
+      <!-- 日历按钮 -->
+      <view style="background:white;text-align:center;border-radius:32px;width:38px;height:38px;margin:0;padding:0;" bindtap="goCalendar">
+        <text class="iconfont icon-rili" style="font-size:24px;margin:0;padding:0;"></text>
+      </view>
+
+    </view>
+
+    <view class="row" style="justify-content:space-between;margin:150px 20px;">
+      <!-- 身高按钮 -->
+      <view style="width:100px;border-radius:40rpx;background:white;box-shadow:0 0 1px#888888;border:1px solid blue;">
+        <text style="display:inline-block;width:40px;height:40px;border-radius:40px; background:red;text-align:center;line-height:40px;">身高</text>
+        <text>{{height == '' ? '无': height+'米'}}</text>
+      </view>
+      <!-- 体重按钮 -->
+      <view style="width:100px;border-radius:40rpx;background:white;box-shadow:0 0 1px#888888;border:1px solid blue;">
+        <text style="display:inline-block;width:40px;height:40px;border-radius:40px; background:red;text-align:center;line-height:40px;">体重</text>
+        <text>{{weight == '' ? '无': weight+'千克'}}</text>
+      </view>
+    </view>
+
+    <!-- 提示 -->
+  <view style="position:relative;bottom:0;border-radius:32px;width:200px;margin:0 auto;text-align:center;background:red;">
+  <swiper style="height:32px;" vertical='true' autoplay="true" interval="3000"   duration="1000" circular="true" display-multiple-items='1' >
+         <swiper-item class="info" wx:for="{{tips}}" data-index="{{item.index}}">{{item.title}}</swiper-item >
+</swiper>
+  </view>
+  </view>
+</view>

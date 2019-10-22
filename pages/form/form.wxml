@@ -1,0 +1,108 @@
+<!--pages/form/form.wxml-->
+<view class="page">
+  <view class="weui-cells__title">评分表单</view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell ">
+      <view class="weui-cell__hd">
+        <view class="weui-label">年龄</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" bindinput="inputHandler" data-id="age" value="{{age}}"  placeholder="请输入年龄(周岁)" />
+      </view>
+    </view>
+    <view class="weui-cell ">
+      <view class="weui-cell__hd">
+        <view class="weui-label">身高</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input"  bindinput="inputHandler" data-id="height" value="{{height}}" placeholder="请输入身高(米)" />
+      </view>
+    </view>
+    <view class="weui-cell ">
+      <view class="weui-cell__hd">
+        <view class="weui-label">体重</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input"  bindinput="inputHandler" data-id="weight" value="{{weight}}" placeholder="请输入体重(千克)" />
+      </view>
+    </view>
+    <view class="weui-cell ">
+      <view class="weui-cell__hd">
+        <view class="weui-label">BMI</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input"  bindinput="inputHandler" data-id="bmi" value="{{bmi}}" placeholder="请输入BMI" />
+      </view>
+    </view>
+    <view class="weui-cell ">
+      <view class="weui-cell__hd">
+        <view class="weui-label">心率</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input"  bindinput="inputHandler" data-id="heartRate" value="{{heartRate}}" placeholder="请输入心率" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">入睡时间</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="time" value="{{sleep.start}}" start="00:00" end="23:59" bindchange="bindTimeChange" data-id="sleep-start">
+          <view class="weui-select weui-select_in-select-after">{{sleep.start}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">起床时间</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="time" value="{{sleep.end}}" start="00:00" end="23:59" bindchange="bindTimeChange" data-id="sleep-end">
+          <view class="weui-select weui-select_in-select-after">{{sleep.end}}</view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">开始运动</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="time" value="{{exercise.start}}" start="00:00" end="23:59" bindchange="bindTimeChange" data-id="exercise-start">
+          <view class="weui-select weui-select_in-select-after">{{exercise.start}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">结束运动</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="time" value="{{exercise.end}}" start="00:00" end="23:59" bindchange="bindTimeChange" data-id="exercise-end">
+          <view class="weui-select weui-select_in-select-after">{{exercise.end}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">上班时间</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="time" value="{{work.start}}" start="00:00" end="23:59" bindchange="bindTimeChange" data-id="work-start">
+          <view class="weui-select weui-select_in-select-after">{{work.start}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_select">
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">下班时间</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="time" value="{{work.end}}" start="00:00" end="23:59" bindchange="bindTimeChange" data-id="work-end">
+          <view class="weui-select weui-select_in-select-after">{{work.end}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <button class="weui-btn" type="primary" bindtap="submitData">保存</button>
+</view>
