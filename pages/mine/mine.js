@@ -25,19 +25,20 @@ Page({
       "userTx":e.detail.userInfo.avatarUrl,
       "username":e.detail.userInfo.nickName
     })
-    app.globalData.userId = '123'
-    // Bmob.User.upInfo(e.detail.userInfo).then(result => {
-    //   console.log(result)
-    // }).catch(err => {
-    //   console.log(err)
-    // })
-    // Bmob.User.auth().then(res => {
-    //   console.log(res)
-    //   console.log('一键登陆成功')
+    Bmob.User.auth().then(res => {
+      console.log(res)
+      console.log('一键登陆成功')
+      Bmob.User.upInfo(e.detail.userInfo).then(result => {
+        console.log(result)
+        app.globalData.userId = res.openid
+        console.log(res.openid)
+      }).catch(err => {
+        console.log(err)
+      })
 
-    // }).catch(err => {
-    //   console.log(err)
-    // });
+    }).catch(err => {
+      console.log(err)
+    });
   },
   goSetting:function(e){
     wx.openSetting({
