@@ -28,8 +28,8 @@ Page({
     Bmob.User.auth().then(res => {
       console.log(res)
       console.log('一键登陆成功')
+
       Bmob.User.upInfo(e.detail.userInfo).then(result => {
-        console.log(result)
         app.globalData.userId = res.openid
         console.log(res.openid)
       }).catch(err => {
